@@ -1,0 +1,377 @@
+
+/* переменные */
+:root {
+    --accent: #D1A954; 
+}
+.section-padding {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+html {
+    box-sizing: border-box;
+}
+.yellow_text {
+    color: var(--accent); 
+}
+/* компоненты */
+body {
+    font-family: "Ag", Montserrat, open-sans;
+    background-color: #333333;
+    color: white;
+}
+ul li {
+    list-style: none;
+}
+.gray {
+    background-color: #616161;
+    border-color: white;
+}
+/* ! первый экран */
+.header {
+    height: 1045px;
+    background-image: url(../img/Rectangle\ 3\ \(1\).png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.header__menu {
+    position: relative;
+}
+.slider {
+    position: relative;
+    margin-left: 100px;
+}
+/* .header__slider2 {
+    position: relative;
+    margin-left: 120px;
+} */
+@media (max-width: 992px) {
+    img {
+        display: none;
+      }
+}
+.header_title {
+    text-transform: uppercase;
+    font-size: 50px;
+}
+.header__text {
+    font-size: 14px;
+}
+.header__inner {
+    margin-top: 200px;
+}
+.menu__item{
+    margin-right: 45px;
+    position: relative;   
+}
+.menu__item_tel {
+    margin-left: 130px; 
+}
+.menu__link {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: .3s 
+}
+
+@media (max-width: 992px) {
+    .menu__link  {
+        padding: 0;
+        width: 100px;
+      }
+}
+@media (max-width: 992px) {
+    .menu  {
+        width: 90%;
+        flex-wrap: wrap;
+      }
+}
+@media (mfx-width: 992px) {
+    .menu__item_tel  {
+       margin-top: 20px;
+      }
+}
+.menu__link:hover {
+    color: white;
+    text-decoration: underline var(--accent);
+}
+
+.menu {
+    margin-left: -60px;
+    text-transform: uppercase;
+}
+.button {
+    background-color: var(--accent);
+    height: 50px;
+    width: 160px;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+}
+.header__social {
+    position: absolute;
+    width: 130px;
+    height: 1045px;
+    background-color: #313131;
+    margin-left: -20%;
+}
+/* @media (mfx-width: 992px) {
+    .header__social  {
+        margin-left: 10%;
+      }
+} */
+.social{
+    width: 130px;
+}
+.social__link_instagram {
+    height: 20px;
+    width: 20px;
+    background-image: url(../img/instagram.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .3s ;
+}
+.icon__instagram:hover .social__link_instagram {
+    background-image: url(../img/instagram1.png);
+}
+.icon__instagram {
+    height: 30px;
+    width: 40px;
+    display: block;
+}
+.social__link_facebook {
+    height: 20px;
+    width: 10px;
+    background-image: url(../img/facebook.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .3s ;
+}
+.icon__facebook:hover .social__link_facebook {
+    background-image: url(../img/facebook1.png);
+}
+.icon__facebook {
+    height: 45px;
+    width: 50px;
+    display: block;
+}
+.social__link_vk {
+    height: 10px;
+    width: 20px;
+    background-image: url(../img/vk.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .3s ;
+}
+.icon__vk:hover .social__link_vk {
+    background-image: url(../img/vk1.png);
+}
+.icon__vk {
+    height: 20px;
+    width: 50px;
+    display: block;
+}
+.social__link_youtube {
+    height: 13px;
+    width: 19px;
+    background-image: url(../img/youtube.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .3s ;
+}
+.icon__youtube:hover .social__link_youtube {
+    background-image: url(../img/youtube1.png);
+}
+.icon__youtube {
+    height: 15px;
+    width: 30px;
+    display: block;
+}
+.social-line {
+    height: 100px;
+}
+.social-text {
+    position: absolute;
+    font-size: 16px;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    width: 250px;
+    height: 50px; 
+    margin-top: -520px; 
+}
+
+/* !секкия 1я "О театре */
+.about_the_theater{
+    height: 830px;
+    background-color: #313131;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+} 
+.about_the_theater__title {
+    text-transform: uppercase;
+    font-size: 48px;
+    margin-top: 150px;
+}
+.about_the_theater__subtitle{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.about_the_theater__text {
+    font-size: 14px;
+}
+.about_the_theater__inner {
+    max-width: 450px;
+}
+.foto-facade {
+    width: 350px;
+    height: 290px;
+}
+.about_the_theater__wrapper {
+    width: 100%;
+}
+/* !секция 3я "наши постановки" */
+
+.our_productions__title {
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.image{
+    margin-left: 140px;
+}
+.image-theater1 {
+    width: 440px;
+    height: 550px;
+    background-image: url(../img/1.png);
+}
+.image-theater2 {
+    width: 440px;
+    height: 550px;
+    background-image: url(../img/2.png);
+}
+.image-theater3 {
+    width: 440px;
+    height: 550px;
+    background-image: url(../img/3.png);
+}
+.image-theater4 {
+    width: 440px;
+    height: 550px;
+    background-image: url(../img/4.png);
+}
+.image-text {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+.image-vertical_text{
+    height: 550px;
+    font-size: 18px;
+    text-transform: uppercase;
+    transform: rotate(-90deg); 
+}
+.search {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    background-color: var(--accent);
+}
+/* ! секция 3я "лучший театр" */
+
+.best_theater {
+    background-image: url(../img/best_theater.png);
+    width: 1110px;
+    height: 550px;
+}
+.best_theater__year{
+    color: var(--accent); 
+    font-size: 72px;
+    font-weight: 600;
+}
+.best_theater__title{
+    font-size: 36px;
+    font-weight: 600;
+    margin-right: 50px;
+}
+.best_theater__inner {
+    margin-left: 15%;
+} 
+/* !секция 4я "партнеры театра" */
+
+.theater_partners__logo {
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 250px;
+}
+
+/* !секция 5я "стасть меценатом */
+.to_donate__title{
+    margin-bottom: -60px;
+}
+.to_donate__message {
+    font-size: 12px;
+    width: 300px; 
+    margin-top: 73px;
+    padding: 20px 20px 0px 20px;
+    resize: vertical;
+    min-height: 95px;
+    max-height: 95px;
+    overflow: auto;
+    margin-left: 69%;
+    color: white;
+}
+.to_donate__menu{
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 100px;
+}
+.to_donate__text{
+    max-width: 390px;
+    font-size: 10px;
+    margin-top: -13%;
+} 
+.to_donate__name{
+    width: 180px;
+    height: 35px;
+    font-size: 12px;
+    color: white;
+}
+.to_donate__button {
+    width: 190px;
+    height: 50px;
+    background-color: var(--accent);
+    margin-left: 260px;
+}
+.to_donate__wrapper {
+    margin-bottom: 80px;
+}
+.to_donate__link{
+    color: white;
+}
+.to_donate__link:hover {
+    color: var(--accent);
+}
+.to_donate__wrap{
+    margin-top: 8%;
+}
+textarea::placeholder {
+    color: white;
+   }
+input[type="tel"]::placeholder {
+    color: white;
+   }
+input[type="email"]::placeholder {
+    color: white;
+   }
+input[type="text"]::placeholder {
+    color: white;
+   }
+/*! футур */
+.footer-line{
+    margin-top: 70px;
+    height: 0.5px;
+}
+.footer-text{
+    font-size: 12px;
+}
