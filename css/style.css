@@ -10,26 +10,34 @@
 html {
     box-sizing: border-box;
 }
-.yellow_text {
+.text--yellow {
     color: var(--accent); 
 }
 /* компоненты */
 body {
-    font-family: "Ag", Montserrat, open-sans;
+    font-family: 'Open Sans Condensed',Arial, Helvetica, sans-serif;
     background-color: #333333;
     color: white;
+}
+@media (max-width: 992px) {
+    body {
+       margin-right: -295px;
+      }
 }
 ul li {
     list-style: none;
 }
 .gray {
-    background-color: #616161;
-    border-color: white;
+    background-color: #444444;
+    /* border-color: #616161; */
+}
+form {
+   padding-left: 50px;
 }
 /* ! первый экран */
 .header {
     height: 1045px;
-    background-image: url(../img/Rectangle\ 3\ \(1\).png);
+    background-image: url(../img/bg.png);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -37,59 +45,110 @@ ul li {
 .header__menu {
     position: relative;
 }
+.header__item {
+   margin-top: 200px; 
+}
+
 .slider {
     position: relative;
-    margin-left: 100px;
+    margin-top: 200px;
 }
 /* .header__slider2 {
     position: relative;
     margin-left: 120px;
 } */
+.img_arrow {
+    width: 45px;
+    height: 18px;
+}
+.button_toggle {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    color: #C4C4C4;
+    letter-spacing: 1px;
+}
+.button_toggle-left {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    color: #C4C4C4;
+    letter-spacing: 1px;
+}
+.toggle {
+    display: flex;
+    justify-content: space-around;
+    max-width: 350px;
+    margin-top: 30px;
+}
 @media (max-width: 992px) {
-    img {
+    .slider {
         display: none;
       }
 }
 .header_title {
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 60px;
+    font-weight: 700; 
+    letter-spacing: 2px;
 }
+@media (max-width: 992px) {
+    .header_title  {
+        font-size: 60px;
+      }
+} 
 .header__text {
     font-size: 14px;
+    font-weight: 400;
+    max-width: 440px;
+    letter-spacing: 1px;
 }
-.header__inner {
-    margin-top: 200px;
-}
+@media (max-width: 992px) {
+    .header__text  {
+        font-size: 22px;
+        width: 700px;
+      }
+} 
 .menu__item{
     margin-right: 45px;
-    position: relative;   
+    position: relative; 
+    letter-spacing: 1px;  
 }
-.menu__item_tel {
+.menu__item:last-child {
+    margin-right: 0;
+}
+.menu__item-tel {
     margin-left: 130px; 
 }
 .menu__link {
     color: white;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
-    transition: .3s 
+    transition: all .3s ease-in-out;
 }
 
 @media (max-width: 992px) {
     .menu__link  {
         padding: 0;
         width: 100px;
+        font-size: 18px;
       }
 }
 @media (max-width: 992px) {
     .menu  {
-        width: 90%;
         flex-wrap: wrap;
       }
 }
-@media (mfx-width: 992px) {
+@media (max-width: 992px) {
     .menu__item_tel  {
-       margin-top: 20px;
+       margin-top: 40px;
+       margin-left: 350px;
+       font-size: 18px;
       }
 }
 .menu__link:hover {
@@ -98,7 +157,7 @@ ul li {
 }
 
 .menu {
-    margin-left: -60px;
+    margin-left: -35px;
     text-transform: uppercase;
 }
 .button {
@@ -107,24 +166,28 @@ ul li {
     width: 160px;
     color: white;
     font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     border: none;
 }
 .header__social {
-    position: absolute;
+    position: fixed;
     width: 130px;
     height: 1045px;
-    background-color: #313131;
-    margin-left: -20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
 }
-/* @media (mfx-width: 992px) {
+ /* @media (max-width: 992px) {
     .header__social  {
-        margin-left: 10%;
+        margin-left: -16%;
       }
-} */
+}  */
 .social{
     width: 130px;
 }
+
 .social__link_instagram {
     height: 20px;
     width: 20px;
@@ -193,13 +256,13 @@ ul li {
     height: 100px;
 }
 .social-text {
-    position: absolute;
     font-size: 16px;
     text-transform: uppercase;
     transform: rotate(-90deg);
     width: 250px;
     height: 50px; 
-    margin-top: -520px; 
+    margin-bottom: 120px;
+    
 }
 
 /* !секкия 1я "О театре */
@@ -217,18 +280,40 @@ ul li {
 }
 .about_the_theater__subtitle{
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+@media (max-width: 992px) {
+    .about_the_theater__subtitle {
+       font-size: 24px;
+      }
 }
 .about_the_theater__text {
     font-size: 14px;
+    max-width: 330px;
+    letter-spacing: 1px; 
+}
+@media (max-width: 992px) {
+    .about_the_theater__text  {
+        font-size: 16px;
+      }
 }
 .about_the_theater__inner {
     max-width: 450px;
+}
+.about_the_theater__wrap {
+    margin: 0 40px 0 40px;
 }
 .foto-facade {
     width: 350px;
     height: 290px;
 }
+@media (max-width: 992px) {
+    .foto-facade  {
+        display: none;
+      }
+} 
 .about_the_theater__wrapper {
     width: 100%;
 }
@@ -241,42 +326,138 @@ ul li {
 .image{
     margin-left: 140px;
 }
+@media (max-width: 992px) {
+    .image {
+        margin-left: 840px;
+      }
+}
 .image-theater1 {
     width: 440px;
     height: 550px;
     background-image: url(../img/1.png);
+}
+.search1 {
+    display: none;
+}
+.img1 {
+    opacity:0;
+}
+.image-theater1:hover .search1 {
+    margin-top: 230px;
+    margin-left: 170px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    background-color: var(--accent);
+}
+.image-theater1:hover .img1 {
+    opacity:1;
+}
+.image-theater1:hover .image-text {
+    display: none;
+}
+.image-theater1:hover .image-vertical_text {
+    display: none;
 }
 .image-theater2 {
     width: 440px;
     height: 550px;
     background-image: url(../img/2.png);
 }
+.search2 {
+    display: none;
+}
+.img2 {
+    opacity:0;
+}
+.image-theater2:hover .search2 {
+    margin-top: 230px;
+    margin-left: 170px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    background-color: var(--accent);
+}
+.image-theater2:hover .img2 {
+    opacity:1;
+}
+.image-theater2:hover .image-text {
+    display: none;
+}
+.image-theater2:hover .image-vertical_text {
+    display: none;
+}
 .image-theater3 {
     width: 440px;
     height: 550px;
     background-image: url(../img/3.png);
+}
+.search3 {
+    display: none;
+}
+.img3 {
+    opacity:0;
+}
+.image-theater3:hover .search3 {
+    margin-top: 230px;
+    margin-left: 170px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    background-color: var(--accent);
+}
+.image-theater3:hover .img3 {
+    opacity:1;
+}
+.image-theater3:hover .image-text {
+    display: none;
+}
+.image-theater3:hover .image-vertical_text {
+    display: none;
 }
 .image-theater4 {
     width: 440px;
     height: 550px;
     background-image: url(../img/4.png);
 }
-.image-text {
-    text-transform: uppercase;
-    font-size: 24px;
+.search4 {
+    display: none;
 }
-.image-vertical_text{
-    height: 550px;
-    font-size: 18px;
-    text-transform: uppercase;
-    transform: rotate(-90deg); 
+.img4 {
+    opacity:0;
 }
-.search {
+.image-theater4:hover .search4 {
+    margin-top: 230px;
+    margin-left: 170px;
     height: 100px;
     width: 100px;
     border-radius: 100px;
     background-color: var(--accent);
 }
+.image-theater4:hover .img4 {
+    opacity:1;
+}
+.image-theater4:hover .image-text {
+    display: none;
+}
+.image-theater4:hover .image-vertical_text {
+    display: none;
+}
+.image-text {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.image-vertical_text{
+    height: 550px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    letter-spacing: 1px; 
+}
+
 /* ! секция 3я "лучший театр" */
 
 .best_theater {
@@ -291,7 +472,7 @@ ul li {
 }
 .best_theater__title{
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 700;
     margin-right: 50px;
 }
 .best_theater__inner {
@@ -304,22 +485,34 @@ ul li {
     width: 100%;
     max-height: 250px;
 }
-
+@media (max-width: 992px) {
+    .theater_partners__logo {
+        margin-left: 650px;
+      }
+}
+@media (max-width: 992px) {
+    .image-logo {
+        width: 240px;
+        height: 100px;
+        margin-right: 60px;
+      }
+}
 /* !секция 5я "стасть меценатом */
 .to_donate__title{
     margin-bottom: -60px;
 }
 .to_donate__message {
+    font-family: "Open sans";
     font-size: 12px;
     width: 300px; 
     margin-top: 73px;
-    padding: 20px 20px 0px 20px;
+    padding: 10px 10px 0px 10px;
     resize: vertical;
     min-height: 95px;
     max-height: 95px;
     overflow: auto;
-    margin-left: 69%;
     color: white;
+    border-width: 1px;
 }
 .to_donate__menu{
     flex-wrap: wrap;
@@ -329,22 +522,52 @@ ul li {
 .to_donate__text{
     max-width: 390px;
     font-size: 10px;
-    margin-top: -13%;
+    margin-top: -11%; 
+    font-family: "Open sans";
+    font-weight: 400; 
+    letter-spacing: 0.5px; 
+    color: #989898;
+    margin-left: 60px;
+} 
+@media (max-width: 992px) {
+    .to_donate__text {
+        margin-right: 550px;
+      }
 } 
 .to_donate__name{
+    font-family: "Open sans";
+    font-weight: 400;
     width: 180px;
     height: 35px;
     font-size: 12px;
     color: white;
+    padding-left: 10px;
+    border-width: 1px;
 }
 .to_donate__button {
     width: 190px;
     height: 50px;
     background-color: var(--accent);
-    margin-left: 260px;
+    margin-left: 110px;
 }
 .to_donate__wrapper {
     margin-bottom: 80px;
+}
+
+@media (max-width: 992px) {
+    .to_donate__wrapper {
+        flex-direction: column;
+      }
+}
+@media (max-width: 992px) {
+    .email {
+        transform: scaleX(-1);
+      }
+}
+@media (max-width: 992px) {
+    .address {
+        transform: scaleX(-1);
+      }
 }
 .to_donate__link{
     color: white;
@@ -353,20 +576,29 @@ ul li {
     color: var(--accent);
 }
 .to_donate__wrap{
+    font-size: 16px;
     margin-top: 8%;
+    font-weight: 600;
+    font-family: "Open sans Condensed";
+    text-transform: uppercase;
 }
 textarea::placeholder {
-    color: white;
+    color: #989898;
    }
 input[type="tel"]::placeholder {
-    color: white;
+    color: #989898;
    }
 input[type="email"]::placeholder {
-    color: white;
+    color: #989898;
    }
 input[type="text"]::placeholder {
-    color: white;
+    color: #989898;
    }
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
 /*! футур */
 .footer-line{
     margin-top: 70px;
@@ -374,4 +606,6 @@ input[type="text"]::placeholder {
 }
 .footer-text{
     font-size: 12px;
+    color: #989898;
+    font-family: "Open sans"
 }
