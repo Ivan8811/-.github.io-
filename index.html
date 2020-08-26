@@ -13,7 +13,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -93,41 +93,43 @@
           </div>
               <div class="col-6 col-xl-6 col-lg-6 col-ml-4">
             <div class="slider">
-              <img src="./img/image_slider1.png" alt="slider" />
-              <!-- <img src="./img/image_slider2.png" alt="slider" /> -->
-            <!-- <div class="slider1 d-flex align-items-center">
-            </div>
-            <div class="slider2 d-flex align-items-center"> 
-             </div> -->
-            </div>
-            <div class="toggle d-flex align-items-center">
-              <div>
-                <img class="img_arrow mb-1 mr-2" src="./img/arrow.png" alt="arrow">
-                <button class="button_toggle-left">перед</button>
+              <div class="slider__item">
+                <div class="picture__wrapper">
+                  <img src="./img/image_slider1.png" alt="slider" />
+                  <img src="./img/image_slider2.png" alt="slider" />
+                </div>
               </div>
-              <div>
-                 <button class="button_toggle">след </button>
-                <img class="img_arrow mb-1 ml-2" src="./img/arrow_right.png" alt="arrow">
+              <div class="slider__item">
+                <div class="picture__wrapper">
+                  <img src="./img/image_slider1.png" alt="slider" />
+                  <img src="./img/image_slider2.png" alt="slider" />
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="picture__wrapper">
+                  <img src="./img/image_slider1.png" alt="slider" />
+                  <img src="./img/image_slider2.png" alt="slider" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <section class="about_the_theater">
+    <section class="about_theater">
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex flex-column align-items-center">
-            <div class="about_the_theater__title">
+            <div class="about_theater__title">
               <span class="text--yellow">о</span> театре
             </div>
-            <div class="about_the_theater__wrapper d-flex justify-content-center align-items-center">
+            <div class="about_theater__wrapper d-flex justify-content-center align-items-center">
               <div>
-                <div class="about_the_theater__inner">
-                  <div class="about_the_theater__subtitle mb-3">
+                <div class="about_theater__inner">
+                  <div class="about_theater__subtitle mb-3">
                     самый лучший театр спб
                   </div>
-                  <div class="about_the_theater__text">
+                  <div class="about_theater__text">
                     Как свидетельствуют архивные документы, первое каменное
                     здание Большого театра начали возводить в 1775 году по
                     проекту Антонио Ринальди. В дальнейшем, после того как
@@ -142,17 +144,17 @@
                 </div>
               </div>
               <div
-                class="about_the_theater__wrap section-padding d-flex flex-column align-items-start"
+                class="about_theater__wrap section-padding d-flex flex-column align-items-start"
               >
-                <div class="about_the_theater__subtitle mb-3">
+                <div class="about_theater__subtitle mb-3">
                   немного о цифрах
                 </div >
                 <img src="./img/armchair1.png" alt="armchair" />
-                <div class="about_the_theater__text mb-3 mt-3">
+                <div class="about_theater__text mb-3 mt-3">
                   <span class="text--yellow">1600</span> посадочный мест
                 </div>
                 <img src="./img/theater1.png" alt="theater" />
-                <div class="about_the_theater__text mt-3">
+                <div class="about_theater__text mt-3">
                   <span class="text--yellow">350</span> лет истории
                 </div>
               </div>
@@ -272,15 +274,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 d-flex flex-column align-items-center">
-                      <div class="to_donate__title our_productions__title section-padding align-items-center">
+                      <div class="donate__title our_productions__title section-padding align-items-center">
                         <span class="text--yellow">стать</span> меценатом
                       </div>
-                      <div class="to_donate__wrapper d-flex align-items-center">
+                      <div class="donate__wrapper d-flex align-items-center">
                         <div class="col-3 mt-5">
-                          <div class="to_donate__wrap d-flex flex-column">
-                              <a href="tel:" class="to_donate__link mb-4">+38 (044) 587-49-07</a>
+                          <div class="donate__wrap d-flex flex-column">
+                              <a href="tel:" class="donate__link mb-4">+38 (044) 587-49-07</a>
                               <div>
-                                <a href="tel:" class="to_donate__link">+38 (044) 587-49-07</a> 
+                                <a href="tel:" class="donate__link">+38 (044) 587-49-07</a> 
                               </div>
                                <p class="email mt-4">info@theater.ru</p>
                             <p class="address">г. санкт-петербург, невский 140</p>
@@ -289,22 +291,22 @@
                            <div class="col-8">
 
                             <form class=" d-flex align-items-center ml-5">
-                              <fieldset class=" col-4 to_donate__menu d-flex flex-column ">
-                                  <input class="to_donate__name gray"type="text" maxlength="15"placeholder="Имя" >
-                                  <input class="to_donate__tel to_donate__name gray mt-4"type="tel"placeholder="Телефон" >
+                              <fieldset class=" col-4 donate__menu d-flex flex-column ">
+                                  <input class="donate__name gray"type="text" maxlength="15"placeholder="Имя" >
+                                  <input class="donate__tel donate__name gray mt-4"type="tel"placeholder="Телефон" >
                               </fieldset>
-                              <fieldset class=" col-4 to_donate__menu d-flex flex-column ">
-                                <input class="to_donate__names to_donate__name gray"type="text"maxlength="15"placeholder="Компания"                 >
-                                <input class="to_donate__email to_donate__name gray mt-4"type="email"placeholder="E-mail" > 
+                              <fieldset class=" col-4 donate__menu d-flex flex-column ">
+                                <input class="donate__names donate__name gray"type="text"maxlength="15"placeholder="Компания"                 >
+                                <input class="donate__email donate__name gray mt-4"type="email"placeholder="E-mail" > 
                             </fieldset>
                                   <fieldset class="col-4">
-                                    <textarea class="to_donate__message gray" placeholder="Сообщение"></textarea>
-                                    <input class="to_donate__button button mt-3" type="submit" value="Отправить">
+                                    <textarea class="donate__message gray" placeholder="Сообщение"></textarea>
+                                    <input class="donate__button button mt-3" type="submit" value="Отправить">
                                 </fieldset>
                             </form>
                            </div>
                       </div>
-                      <div class="to_donate__text col-4">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</div>     
+                      <div class="donate__text col-4">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</div>     
             </div>
         </div>
     </section>
@@ -325,16 +327,18 @@
     </div>
   </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.5.0.min.js "integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="crossorigin="anonymous"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.5.0.min.js "integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="crossorigin="anonymous"></script>
+ <script src="js/slick.min.js"></script>
 <script>
   $(document).ready(function(){
     $(".slider").slick({
-      arrows: false,
-      dots: true,
+      arrows: true,
+      dots: false,
       infinite: true,
       autoplay: true,
       autoplaySpeed: 2000,
+      nextArrow: `<button class="arrow-next">след </button>`,
+      prevArrow: `<button class="arrow-prev">перед</button>`
     });
   });
 </script>

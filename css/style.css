@@ -13,6 +13,7 @@ html {
 .text--yellow {
     color: var(--accent); 
 }
+
 /* компоненты */
 body {
     font-family: 'Open Sans Condensed',Arial, Helvetica, sans-serif;
@@ -29,7 +30,6 @@ ul li {
 }
 .gray {
     background-color: #444444;
-    /* border-color: #616161; */
 }
 form {
    padding-left: 50px;
@@ -48,42 +48,88 @@ form {
 .header__item {
    margin-top: 200px; 
 }
-
 .slider {
     position: relative;
     margin-top: 200px;
 }
-/* .header__slider2 {
+.arrow-next {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    color: #C4C4C4;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: -40px;
+    margin-right: 15px;
+    right: 0;
+}
+.arrow-prev {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    color: #C4C4C4;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: -40px;
+    margin-left: 45px;
+    left: 0;
+}
+
+/*  */
+.slider__item {
     position: relative;
-    margin-left: 120px;
-} */
-.img_arrow {
-    width: 45px;
-    height: 18px;
+    height: 650px;
 }
-.button_toggle {
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    background: none;
-    border: none;
-    color: #C4C4C4;
-    letter-spacing: 1px;
+
+.picture__wrapper {
+    height: inherit;
+    width: inherit;
 }
-.button_toggle-left {
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    background: none;
-    border: none;
-    color: #C4C4C4;
-    letter-spacing: 1px;
+/* inherit - значит наследует параметры от родителя (в данном случае от slider__item */
+.slider__item img {
+    height: inherit;
+    width: inherit;
+    object-position: top;
+    object-fit: contain;
+    position: absolute;
+    padding-bottom: 40px;
 }
-.toggle {
+
+.slider__item img:first-child {
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.slider__item img:last-child {
+    top: 30px;
+    left: 30px;
+}
+.slick-track {
     display: flex;
-    justify-content: space-around;
-    max-width: 350px;
-    margin-top: 30px;
+}
+/* граници слайда */
+.slick-list {
+    overflow: hidden;
+}
+.arrow-next:after {
+    content: '';
+    background-image: url("../img/arrow-next.png");
+    height: 15px;
+    width: 40px;
+    display: inline-block;
+    margin-left: 20px;
+}
+.arrow-prev:before {
+    content: '';
+    background-image: url("../img/arrow-prev.png");
+    height: 15px;
+    width: 40px;
+    display: inline-block;
+    margin-right: 20px;
 }
 @media (max-width: 992px) {
     .slider {
@@ -129,7 +175,7 @@ form {
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
-    transition: all .3s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
 @media (max-width: 992px) {
@@ -266,44 +312,44 @@ form {
 }
 
 /* !секкия 1я "О театре */
-.about_the_theater{
+.about_theater{
     height: 830px;
     background-color: #313131;
     background-size: cover;
     background-position: center;
     width: 100%;
 } 
-.about_the_theater__title {
+.about_theater__title {
     text-transform: uppercase;
     font-size: 48px;
     margin-top: 150px;
 }
-.about_the_theater__subtitle{
+.about_theater__subtitle{
     text-transform: uppercase;
     font-size: 21px;
     font-weight: 700;
     letter-spacing: 1px;
 }
 @media (max-width: 992px) {
-    .about_the_theater__subtitle {
+    .about_theater__subtitle {
        font-size: 24px;
       }
 }
-.about_the_theater__text {
+.about_theater__text {
     font-size: 14px;
-    max-width: 330px;
+    max-width: 360px;
     letter-spacing: 1px; 
 }
 @media (max-width: 992px) {
-    .about_the_theater__text  {
+    .about_theater__text  {
         font-size: 16px;
       }
 }
-.about_the_theater__inner {
+.about_theater__inner {
     max-width: 450px;
 }
-.about_the_theater__wrap {
-    margin: 0 40px 0 40px;
+.about_theater__wrap {
+    margin: 0 60px 0 50px;
 }
 .foto-facade {
     width: 350px;
@@ -314,7 +360,7 @@ form {
         display: none;
       }
 } 
-.about_the_theater__wrapper {
+.about_theater__wrapper {
     width: 100%;
 }
 /* !секция 3я "наши постановки" */
@@ -498,10 +544,10 @@ form {
       }
 }
 /* !секция 5я "стасть меценатом */
-.to_donate__title{
+.donate__title{
     margin-bottom: -60px;
 }
-.to_donate__message {
+.donate__message {
     font-family: "Open sans";
     font-size: 12px;
     width: 300px; 
@@ -514,12 +560,12 @@ form {
     color: white;
     border-width: 1px;
 }
-.to_donate__menu{
+.donate__menu{
     flex-wrap: wrap;
     width: 100%;
     max-height: 100px;
 }
-.to_donate__text{
+.donate__text{
     max-width: 390px;
     font-size: 10px;
     margin-top: -11%; 
@@ -530,11 +576,11 @@ form {
     margin-left: 60px;
 } 
 @media (max-width: 992px) {
-    .to_donate__text {
+    .donate__text {
         margin-right: 550px;
       }
 } 
-.to_donate__name{
+.donate__name{
     font-family: "Open sans";
     font-weight: 400;
     width: 180px;
@@ -544,18 +590,18 @@ form {
     padding-left: 10px;
     border-width: 1px;
 }
-.to_donate__button {
+.donate__button {
     width: 190px;
     height: 50px;
     background-color: var(--accent);
     margin-left: 110px;
 }
-.to_donate__wrapper {
+.donate__wrapper {
     margin-bottom: 80px;
 }
 
 @media (max-width: 992px) {
-    .to_donate__wrapper {
+    .donate__wrapper {
         flex-direction: column;
       }
 }
@@ -569,13 +615,13 @@ form {
         transform: scaleX(-1);
       }
 }
-.to_donate__link{
+.donate__link{
     color: white;
 }
-.to_donate__link:hover {
+.donate__link:hover {
     color: var(--accent);
 }
-.to_donate__wrap{
+.donate__wrap{
     font-size: 16px;
     margin-top: 8%;
     font-weight: 600;
