@@ -13,6 +13,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -25,27 +26,21 @@
               <ul class="menu d-flex justify-content-between align-items-center">
                 <li class="menu__item">
                   <a href="#" class="menu__link">главная</a>
-                  <hr class="menu__link-line">
                 </li>
                 <li class="menu__item">
                   <a href="#" class="menu__link">о театре</a>
-                  <hr class="menu__link-line">
                 </li>
                 <li class="menu__item">
                   <a href="#" class="menu__link">наши постановки</a>
-                  <hr class="menu__link-line">
                 </li>
                 <li class="menu__item">
                   <a href="#" class="menu__link">партнеры театра</a>
-                  <hr class="menu__link-line">
                 </li>
                 <li class="menu__item">
                   <a href="#" class="menu__link">контакты</a>
-                  <hr class="menu__link-line">
                 </li>
                 <li class="menu__item menu__item-tel">
                   <a href="tel:" class="menu__link">+7 495 123-45-67</a>
-                  <hr class="menu__link-line">
                 </li>
               </ul>
               </nav>
@@ -53,39 +48,25 @@
           </div>
           <div class="header__social d-flex justify-content-center align-items-center pb-5">
             <div class="social d-flex flex-column align-items-center mb-5">
-              <div class="social-text d-flex justify-content-center align-items-center ">конрольная информация</div>
+              <div class="social__text d-flex justify-content-center align-items-center ">конрольная информация</div>
               <hr
-                class="social-line d-flex align-items-center mb-5"
+                class="social__line d-flex align-items-center mb-5"
                 width="3"
                 color="white"
               />
-              <li class="icon__instagram mb-3 d-flex justify-content-center">
-                <a href="#">
-                  <div class="social__link_instagram"></div>
-                </a>
-              </li>
-              <li class="icon__facebook mb-2 d-flex justify-content-center">
-                <a href="#">
-                  <div class="social__link_facebook "></div>
-                </a>
-              </li>
-              <li class="icon__vk d-flex justify-content-center">
-                <a href="#">
-                  <div class="social__link_vk "></div>
-                </a>
-              </li>
-              <li class="icon__youtube mt-4 d-flex justify-content-center">
-                <a href="#">
-                  <div class="social__link_youtube mb-5 "></div>
-                </a>
-              </li>
+              <ul class="social__icon d-flex flex-column align-items-center">
+                <li class="icon mb-4 d-flex justify-content-center"><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+                <li class="icon mb-3 d-flex justify-content-center"><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+                <li class="icon mb-3 d-flex justify-content-center"><a href="#"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a></li>
+                <li class="icon mb-2 d-flex justify-content-center"><a href="#"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-6 d-flex align-items-center">
             <div class="header__item flex-column d-flex align-items-start">
-              <div class="header_title">большой театр</div>
+              <div class="header__title">большой театр</div>
               <div class="header__text mt-5">
                 Большо́й теа́тр — петербургский театр, существовавший в
                 1784—1886 годах, с 1886 года — Петербургская консерватория.
@@ -225,11 +206,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 d-flex align-items-center">
-                    <div class="best_theater d-flex justify-content-between align-items-center">
-                        <div class="best_theater__inner col-3 d-flex flex-column align-items-center">
-                            <p class="best_theater__year">2018</P>
-                            <p class="best_theater__year">2019</P>
-                            <p class="best_theater__year">2020</P>
+                    <div class="best-theater d-flex justify-content-between align-items-center">
+                        <div class="best-theater__inner col-3 d-flex flex-column align-items-center">
+                            <p class="best-theater__year">2018</P>
+                            <p class="best-theater__year">2019</P>
+                            <p class="best-theater__year">2020</P>
                         </div>
                         <div class=" col-9 mr-5 best_theater__wrap">
                             <div class=" col-4 best_theater__star d-flex justify-content-between align-items-center">
@@ -239,7 +220,7 @@
                                 <img class="image-star" src="./img/star.png" alt="star" />
                                 <img class="image-star" src="./img/star.png" alt="star" />
                             </div>
-                        <div class="best_theater__title mt-3 col-7">
+                        <div class="best-theater__title mt-3 col-7">
                             Лучший театр
 по мнению театральных критиков Парижа
                         </div>

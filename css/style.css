@@ -50,36 +50,45 @@ form {
 }
 .menu__item{
     margin-right: 45px;
-    position: relative; 
+    font-size: 14px;
+    color: white;
     letter-spacing: 1px;  
 }
 .menu__item:last-child {
     margin-right: 0;
-}
-.menu__item-tel {
     margin-left: 130px; 
 }
 .menu__link {
     position: relative;
-    color: white;
-    font-size: 14px;
     font-weight: 700;
+    color: inherit;
 }
 .menu__link:hover {
     color: white; 
     text-decoration: none;
 } 
-.menu__link-line {
+.menu__link::before,
+.menu__link--bordered::before {
+    position: absolute;
+    bottom: -5px;
+    display: block;
+    height: 2px;
     opacity: 0;
     content: '';
     width: 100%;
-    border-top: 1px solid var(--accent);
+    background-color: var(--accent);
     margin-top: 0;
     transition: all .3s ease-in-out;
   } 
-.menu__item:hover .menu__link-line {
-    opacity: 1; 
-}
+  .menu__link::before{
+    opacity: 0;
+  }
+  .menu__link--bordered::before {
+    opacity: 1;
+  }
+  .menu__link:hover::before {
+    opacity: 1;
+  }
 @media (max-width: 992px) {
     .menu__link  {
         padding: 0;
@@ -183,7 +192,7 @@ form {
         display: none;
       }
 }
-.header_title {
+.header__title {
     text-transform: uppercase;
     font-size: 60px;
     font-weight: 700; 
@@ -229,48 +238,48 @@ form {
     left: 0;
     top: 0;
 }
- /* @media (max-width: 992px) {
-    .header__social  {
-        margin-left: -16%;
-      }
-}  */
 .social{
     width: 130px;
 }
+.social__icon {
+    margin-right: 40px;
+    margin-top: 30px;
+}
+.icon:hover .fa {
+    color: var(--accent);
+}
+.fa {
+    font-size: 1.5em;
+    color: white;
+    transition: .3s ;
+}
 
-.social__link_instagram {
+/* .social__link_instagram {
     height: 20px;
     width: 20px;
     background-image: url(../img/instagram.png);
     background-size: cover;
     background-repeat: no-repeat;
     transition: .3s ;
+} */
+/* .social__link_instagram1 {
+    opacity: 0;
 }
-.icon__instagram:hover .social__link_instagram {
-    background-image: url(../img/instagram1.png);
-}
-.icon__instagram {
+.icon__instagram:hover .social__link_instagram1 {
+    opacity: 1;
+} */
+/* .icon__instagram {
     height: 30px;
     width: 40px;
     display: block;
-}
-.social__link_facebook {
-    height: 20px;
-    width: 10px;
-    background-image: url(../img/facebook.png);
+} */
+/* .social__link_facebook {
     background-size: cover;
     background-repeat: no-repeat;
     transition: .3s ;
-}
-.icon__facebook:hover .social__link_facebook {
-    background-image: url(../img/facebook1.png);
-}
-.icon__facebook {
-    height: 45px;
-    width: 50px;
-    display: block;
-}
-.social__link_vk {
+} */
+
+/* .social__link_vk {
     height: 10px;
     width: 20px;
     background-image: url(../img/vk.png);
@@ -301,11 +310,11 @@ form {
     height: 15px;
     width: 30px;
     display: block;
-}
-.social-line {
+} */
+.social__line {
     height: 100px;
 }
-.social-text {
+.social__text {
     font-size: 16px;
     text-transform: uppercase;
     transform: rotate(-90deg);
@@ -509,22 +518,22 @@ form {
 
 /* ! секция 3я "лучший театр" */
 
-.best_theater {
+.best-theater {
     background-image: url(../img/best_theater.png);
     width: 1110px;
     height: 550px;
 }
-.best_theater__year{
+.best-theater__year{
     color: var(--accent); 
     font-size: 72px;
     font-weight: 600;
 }
-.best_theater__title{
+.best-theater__title{
     font-size: 36px;
     font-weight: 700;
     margin-right: 50px;
 }
-.best_theater__inner {
+.best-theater__inner {
     margin-left: 15%;
 } 
 /* !секция 4я "партнеры театра" */
