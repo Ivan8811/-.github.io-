@@ -39,14 +39,33 @@
                 <li class="menu__item">
                   <a href="#" class="menu__link">контакты</a>
                 </li>
-                <li class="menu__item menu__item-tel">
-                  <a href="tel:" class="menu__link">+7 495 123-45-67</a>
+                <li class="menu__item-tel menu__item">
+                  <a href="tel:" class="menu__link-tel">+7 495 123-45-67</a>
                 </li>
               </ul>
               </nav>
             </div>
           </div>
           <div class="header__social d-flex justify-content-center align-items-center pb-5">
+            <div class="header__nav-tab">
+              <ul class="menu-tab d-flex justify-content-between align-items-center">
+                <li class="menu__item-tab">
+                  <a href="#" class="menu__link-tab">главная</a>
+                </li>
+                <li class="menu__item-tab mt-4">
+                  <a href="#" class="menu__link-tab">о театре</a>
+                </li>
+                <li class="menu__item-tab mt-4">
+                  <a href="#" class="menu__link-tab">наши постановки</a>
+                </li>
+                <li class="menu__item-tab mt-4">
+                  <a href="#" class="menu__link-tab">партнеры театра</a>
+                </li>
+                <li class="menu__item-tab mt-4">
+                  <a href="#" class="menu__link-tab">контакты</a>
+                </li>
+              </ul>
+            </div>
             <div class="social d-flex flex-column align-items-center mb-5">
               <div class="social__text d-flex justify-content-center align-items-center ">конрольная информация</div>
               <hr
@@ -54,11 +73,27 @@
                 width="3"
                 color="white"
               />
-              <ul class="social__icon d-flex flex-column align-items-center">
-                <li class="icon mb-4 d-flex justify-content-center"><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
-                <li class="icon mb-3 d-flex justify-content-center"><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
-                <li class="icon mb-3 d-flex justify-content-center"><a href="#"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a></li>
-                <li class="icon mb-2 d-flex justify-content-center"><a href="#"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+              <!-- <li>
+                 <a class=" mb-4 mt-4 d-flex justify-content-center">
+                <img class="social__link_instagram" src="./img/instagram.png" alt="icon">
+              </a>
+              </li>
+             
+              <a class=" mb-4 d-flex justify-content-cente align-items-center">
+                <img class="social__link_facebook " src="./img/facebook.png" alt="icon">
+              </a>
+              <a class=" mb-4 d-flex justify-content-cente">
+                <img class="social__link_vk " src="./img/vk.png" alt="icon">
+              </a>
+              <a class=" mb-4 d-flex justify-content-cente">
+                <img class="social__link_youtube " src="./img/youtube.png" alt="icon">
+              </a> -->
+          
+              <ul class="social_icon d-flex align-items-center">
+               <li class="icon__instagram mb-4 d-flex justify-content-center"><a class="social__link_instagram" href="#"></a></li>
+               <li class="icon__facebook mb-4 d-flex justify-content-center"><a class="social__link_facebook" href="#"></a></li>
+               <li class="icon__vk mb-4 d-flex justify-content-center"><a class="social__link_vk" href="#"></a></li>
+               <li class="icon__youtube mb-4 d-flex justify-content-center"><a class="social__link_youtube" href="#"></a></li>
               </ul>
             </div>
           </div>
@@ -80,19 +115,19 @@
             <div class="slider">
               <div class="slider__item">
                 <div class="picture__wrapper">
-                  <img src="./img/image_slider1.png" alt="slider" />
+                  <img src="" alt="slider" />
                   <img src="./img/image_slider2.png" alt="slider" />
                 </div>
               </div>
               <div class="slider__item">
                 <div class="picture__wrapper">
-                  <img src="./img/image_slider1.png" alt="slider" />
+                  <img src="" alt="slider" />
                   <img src="./img/image_slider2.png" alt="slider" />
                 </div>
               </div>
               <div class="slider__item">
                 <div class="picture__wrapper">
-                  <img src="./img/image_slider1.png" alt="slider" />
+                  <img src="" alt="slider" />
                   <img src="./img/image_slider2.png" alt="slider" />
                 </div>
               </div>
@@ -158,7 +193,6 @@
                     <div class="productions__title ">
                         <span class="text--yellow">наши</span> постановки
                       </div>
-
                         <div class="image section-padding d-flex align-items-and">
                           <div class="image-theater1 d-flex flex-column"> 
                             <span class="image-text mt-5 ml-5">оскар 2020</span>
@@ -169,7 +203,6 @@
                             </div>
                             <div class="image-vertical_text pt-5 pl-4"><span>сентябрь 2020</span></div>
                           </div>
-
                           <div class="image-theater2 d-flex flex-column"> 
                             <span class="image-text mt-5 ml-5">золотой патифон</span>
                             <div class="search2 d-flex justify-content-center align-items-center">
@@ -254,23 +287,22 @@
     <section class="donate">
         <div class="container">
             <div class="row">
-                <div class="col-12 d-flex flex-column align-items-center">
+              <div class="col-12 d-flex flex-column align-items-center">
                       <div class="donate__title productions__title section-padding align-items-center">
                         <span class="text--yellow">стать</span> меценатом
                       </div>
                       <div class="donate__wrapper d-flex align-items-center">
-                        <div class="col-3 mt-5">
+                        <div class="donate-item col-3 mt-5">
                           <div class="donate__wrap d-flex flex-column">
                               <a href="tel:" class="donate__link mb-4">+38 (044) 587-49-07</a>
                               <div>
                                 <a href="tel:" class="donate__link">+38 (044) 587-49-07</a> 
                               </div>
-                               <p class="email mt-4">info@theater.ru</p>
-                            <p class="address">г. санкт-петербург, невский 140</p>
+                                  <p class="email mt-4">info@theater.ru</p>
+                                  <p class="address">г. санкт-петербург, невский 140</p>
                             </div>
                         </div>
-                           <div class="col-8">
-
+                           <div class="donate-form col-8">
                             <form class=" d-flex align-items-center ml-5">
                               <fieldset class=" col-4 donate__menu d-flex flex-column ">
                                   <input class="donate__name gray"type="text" maxlength="15"placeholder="Имя" >
@@ -286,20 +318,22 @@
                                 </fieldset>
                             </form>
                            </div>
-                      </div>
-                      <div class="donate__text col-4">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</div>     
-            </div>
+                           <div class="donate__text col-4">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</div>     
+                      </div>  
+              </div>
         </div>
     </section>
 <footer class="footer">
   <div class="container">
     <div class="row">
       <div class="col-12">
-         <hr
+        <div class="footer-line_wrap">
+               <hr
   class="footer-line d-flex align-items-center mb-5"
   width="1110"
   color="white"
 />
+        </div> 
 <div class="footer-text d-flex justify-content-between align-items-center">
   <p>(с) Все права защищены. Большой театр. 2020</p>
   <p>Разработано d-e-n.ru</p>
